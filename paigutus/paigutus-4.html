@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paigutamine 4 - Flex ja semantilised elemendid</title>
+    <style>
+        body {
+            background: #189bcc;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #d9d9d9;
+            color: #1b1b1b;
+            padding: 1rem;
+            text-align: center;
+            height: 8vh;
+        }
+
+        nav {
+            background: #d9d9d9;
+            color: #1b1b1b;
+            padding: 1rem;
+        }
+
+        nav>a {
+            margin-left: 20%;
+            margin-right: auto;
+        }
+
+        main {
+            display: flex;
+            width: 100%;
+            background: #d9d9d9;
+            color: #1b1b1b;
+            flex-wrap: wrap;
+        }
+
+        article {
+            order: 1;
+            text-align: center;
+            padding: 1rem;
+            flex-grow: 11;
+        }
+
+        aside {
+            padding: 1rem;
+            text-align: left;
+            order: 3;
+            height: 40vh;
+            flex-grow: 5;
+        }
+
+        .break {
+            order: 2;
+            background: #189bcc;
+            flex-grow: 0.5;
+        }
+
+        footer {
+            display: flex;
+            width: 100%;
+            background: #d9d9d9;
+            color: #1b1b1b;
+            flex-wrap: wrap;
+        }
+
+        .esimene {
+            order: 1;
+            padding: 1rem;
+            flex-grow: 5
+        }
+
+        .break1 {
+            order: 2;
+            background: #189bcc;
+            flex-grow: 0.5;
+        }
+
+        .teine {
+            order: 3;
+            padding: 1rem;
+            flex-grow: 5
+        }
+
+        .break2 {
+            order: 4;
+            background: #189bcc;
+            flex-grow: 0.5;
+            height: 40vh;
+        }
+
+        .kolmas {
+            order: 5;
+            padding: 1rem;
+            flex-grow: 5
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p>Header</p>
+    </header>
+    <br>
+    <nav>
+        <a href="">Link</a>
+    </nav>
+    <br>
+    <main>
+        <article>
+            <p>Peamine sisu osa</p>
+        </article>
+        <div class="break">
+            <p> </p>
+        </div>
+        <aside>
+            <div>
+                <P>Sidebar</P>
+            </div>
+        </aside>
+    </main>
+    <br>
+    <footer>
+        <div class="esimene">
+            <p>Esimene</p>
+        </div>
+        <div class="break1">
+            <p> </p>
+        </div>
+        <div class="teine">
+            <p>Teine</p>
+        </div>
+        <div class="break2">
+            <p> </p>
+        </div>
+        <div class="kolmas">
+            <p>Kolmas</p>
+        </div>
+    </footer>
+</body>

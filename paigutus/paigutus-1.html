@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paigutamine 1</title>
+    <style>
+        .body{
+            margin: 0;
+        }
+        .hero{
+            background: lightcoral;
+            padding: 20px 0;
+        }
+        .container{
+            padding: 30px;
+            height: 100%;
+            width: 960px;
+            margin: 0 auto;
+        }
+        .hero-sisu{
+            border: 2px dotted pink;
+            box-sizing: border-box;
+        }
+        .fullscreen{
+            width: 100vw;
+            height: 100vh;
+        }
+        div{
+            display:block;
+        }
+        .protsentidega{
+            background: yellow;
+            height: 50vh;
+        }
+        .protsentidega .col{
+            width: 50%;
+            height: 100%;
+            float: left;
+            font-size: 44px;
+            box-sizing: border-box;
+        }
+        .protsentidega .col-1-2{
+            background-color: antiquewhite;
+            border: 40px solid yellowgreen;
+        }
+        .protsentidega .col-2-2{
+            background-color: lightblue;
+            border: 40px solid yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero fullscreen">
+        <div class="container hero-sisu">
+            <h1>Paigutamine</h1>
+            <h2>Margin - distants sama taseme elementide vahel</h2>
+            <p><i>collapse</i></p>
+            <span>asdf</span><span>asd</span><span>asd</span><span>asd</span><span>asd</span>
+            <p>Padding - distants, polsterdusvõi õhk parent ja child elementide vahel</p>
+        </div>
+    </div>
+    <div class="protsentidega">
+        <div class="container">
+            <div class="col col-1-2">1. div:50%</div>
+            <div class="col col-2-2">2. div:50%</div>
+        </div>
+    </div>
+</body>
+</html>
