@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Form Example</title>
+  <!-- Bootstrap CSS CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-warning bg-opacity-50">
+    <header class="bg-warning bg-opacity-50 py-5 text-center ">
+        <div class="container">
+          <h1 class="text-dark fs-3"><span class="bg-success bg-opacity-75">VALI DOMEEN</span> / <span class="bg-white">SISESTA ANDMED</span> / <span class="bg-secondary text-white">KÕIK VALMIS</span></h1>
+        </div>
+      </header>
+
+  <div class="container py-5">
+    <h1>Tellimuse info</h1>
+
+    <form action="domeen-5.html" method="get">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nimi</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Number</label>
+        <input type="tel" class="form-control" id="phone" required>
+      </div>
+      <div class="mb-3">
+        <label for="state" class="form-label">Maakond</label>
+        <input type="text" class="form-control" id="state" required>
+      </div>
+      <div class="mb-3">
+        <label for="city" class="form-label">Linn</label>
+        <input type="text" class="form-control" id="city" required>
+      </div>
+      <div class="mb-3">
+        <label for="address" class="form-label">Aaddress</label>
+        <input type="text" class="form-control" id="address" required>
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="unlockFields" checked>
+        <label class="form-check-label" for="unlockFields">Vajutage nupule kui teil on ettevõte</label>
+      </div>
+
+      <div class="unlocked-field">
+        <div class="mb-3">
+          <label for="additionalField1" class="form-label">Firma nimi</label>
+          <input type="text" class="form-control" id="additionalField1">
+        </div>
+        <div class="mb-3">
+          <label for="additionalField2" class="form-label">Firma reg nr.</label>
+          <input type="text" class="form-control" id="additionalField2">
+        </div>
+      </div>
+
+      <div class="total-cost bg-info-subtle">
+        <span id="totalCost">Total Cost: 399.99 €</span>
+      </div>
+
+      <button class="btn btn-success mt-3 next-btn text-black" type="submit">Edasi</button>
+    </form>
+
+  </div>
+
+  <!-- Bootstrap JS and Popper.js CDN links (for Bootstrap functionalities) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const unlockFields = document.getElementById('unlockFields');
+    const unlockedFieldGroup = document.querySelector('.unlocked-field');
+
+    unlockFields.addEventListener('change', function () {
+      if (this.checked) {
+        unlockedFieldGroup.style.display = 'block';
+      } else {
+        unlockedFieldGroup.style.display = 'none';
+        document.getElementById('additionalField1').value = '';
+        document.getElementById('additionalField2').value = '';
+      }
+    });
+  </script>
+</body>
+
+</html>
